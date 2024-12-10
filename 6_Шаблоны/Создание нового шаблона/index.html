@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Редактирование текста шаблона - РОССЕТИ АСТУ</title>
+        <title>Создание шаблона - РОССЕТИ АСТУ</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -140,15 +140,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B/" class="dropdown-item">Создание шаблона</a>
-</li>
-                                    
-<li>
-    <a href="./" class="dropdown-item active" aria-current="page">Редактирование текста шаблона</a>
-</li>
-                                    
-<li>
-    <a href="../%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%20%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%BE%D0%B2/" class="dropdown-item">Настройка параметров</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Создание шаблона</a>
 </li>
                                     
 <li>
@@ -181,12 +173,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B/" class="nav-link">
+                                <a rel="prev" href="../../5_%D0%9F%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D1%8B/%D0%9F%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D1%8B/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%20%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%BE%D0%B2/" class="nav-link">
+                                <a rel="next" href="../%D0%9F%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%20%D0%BF%D0%BE%20%D1%82%D0%B8%D0%BF%D1%83%20%D0%98%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -208,7 +200,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Написание текста шаблона</a>
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Создание шаблона</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Написание текста шаблона</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">Настройка параметров</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -217,40 +219,44 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="_1">Написание текста шаблона</h2>
+<p><em>Шаблоны позволяют настраивать цепочки преобразований с помощью шаблонизатора текста <strong>Freemarker</strong>.</em></p>
+<h2 id="_1">Создание шаблона</h2>
+<p>В разделе <strong>"Шаблоны"</strong> создайте новый шаблон:</p>
+<ul>
+<li>Нажмите на <strong>"+"</strong> над списком объектов.</li>
+<li>В открывшемся окне введите имя шаблона.
+ <img alt="1_New_template.png" src="../../images/6_Template/1_New_template.png" /></li>
+</ul>
+<p><strong>Результат:</strong> 
+   - Шаблон отобразится в списке объектов в разделе <strong>Шаблоны</strong>.
+   - В рабочей области отобразится:
+     - окно для написания текста шаблона;
+     - окно для настройки параметров шаблона;
+     - панель для тестирования шаблона.</p>
+<p><img alt="2_Create_template_result.png" src="../../images/6_Template/2_Create_template_result.png" />
+Для дальнейшей работы, перейдите на страницу шаблона.</p>
+<h2 id="_2">Написание текста шаблона</h2>
 <blockquote>
 <p>Для написания текста шаблона необходимо знать синтаксис запросов <strong>MongoDB</strong> и синтаксис <strong>Freemarker</strong>.</p>
 </blockquote>
 <ul>
-<li>Введите текст шаблона в левом окне.</li>
-</ul>
-<blockquote>
-<p>На верхнем уровне каждый объект содержит команду. Примеры команд: <code>set</code>, <code>addfields</code>, <code>group</code>, <code>unwind</code>, <code>project</code>.</p>
+<li>Введите текст шаблона в левом окне.
+<img alt="3_add_template_text.png" src="../../images/6_Template/3_add_template_text.png" /><blockquote>
+<p>На верхнем уровне каждый объект содержит команду. Примеры команд: <code>set</code>, <code>addfields</code>, <code>group</code>, <code>unwind</code>, <code>project</code>.
+Каждый объект представляет собой шаг преобразования. При написании шаблона, объект выделяется фигурными скобками.</p>
 </blockquote>
-<ul>
-<li>Выделите фигурными скобками объект.</li>
-</ul>
-<blockquote>
-<p>Каждый объект представляет собой шаг преобразования.</p>
-</blockquote>
-<ul>
-<li>Настройте параметры и выгрузите их.</li>
-<li>
-<p>Пропишите параметры внутри объекта:</p>
-<ul>
+</li>
+<li>Пропишите параметры внутри объекта:<ul>
 <li>Скопируйте выражение из библиотеки <strong>MongoDB</strong>.</li>
-<li>Выражение должно быть написано в соответствии с синтаксисом Freemarker: <code>${имя переменной}</code>.</li>
-</ul>
-</li>
-<li>
-<p>В кавычках пропишите параметры из правого поля в скопированное выражение.</p>
-</li>
-</ul>
-<blockquote>
+<li>Выражение должно быть написано в соответствии с синтаксисом Freemarker: <code>${имя переменной}</code>.<blockquote>
 <p>Параметры прописываются через точку в иерархическом порядке.
-<strong>Пример запроса "Заменить указанное значение на пустое":</strong></p>
+<em>Пример запроса "Заменить указанное значение на пустое":</em></p>
 </blockquote>
-<pre><code class="language-json">{
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-Json">{
   &quot;set&quot;: {
     &quot;field&quot;: {
       &quot;$cond&quot;: {
@@ -261,7 +267,31 @@
     }
   }
 }
-</code></pre></div>
+</code></pre>
+<h2 id="_3">Настройка параметров</h2>
+<blockquote>
+<p>Алгоритм настройки будет различным для каждого шаблона и должен соответствовать его тексту.
+- На панели инструментов нажмите на значок настройки переменных.
+<img alt="4_config_peremennue.png" src="../../images/6_Template/4_config_peremennue.png" />
+- В открывшемся окне добавьте переменную - нажмите "+".
+<img alt="5_add_peremenn.png" src="../../images/6_Template/5_add_peremenn.png" />
+- Введите имя переменной и выберите тип данных из списка.
+<img alt="6_type_data.png" src="../../images/6_Template/6_type_data.png" />
+Имя переменной не должно содержать пробелы.
+- Для создания вложенных переменных (например, для родительского типа данных "object"):
+  - Добавьте вложенности при помощи плюса справа от переменной.
+  - Затем добавьте переменные отобразившимся плюсом слева.
+<img alt="7_object_type.png" src="../../images/6_Template/7_object_type.png" />
+Далее, выгрузите параметры, нажав стрелку влево.
+<img alt="8_vygryzka_params.png" src="../../images/6_Template/8_vygryzka_params.png" />
+<em><strong>Результат:</strong> в правом окне отобразятся параметры запроса.</em>
+<img alt="9_right_window_peremennye.png" src="../../images/6_Template/9_right_window_peremennye.png" />
+- Протестируйте шаблон:
+   - Введите тестовые значения в правом окне и выполните запуск.
+   - Результат отобразится в нижнем окне.
+<img alt="10_test_value.png" src="../../images/6_Template/10_test_value.png" />
+Периодически сохраняйте результат работы.</p>
+</blockquote></div>
             </div>
         </div>
 
