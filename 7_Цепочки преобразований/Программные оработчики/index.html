@@ -217,62 +217,81 @@
 <h1 id="json">Импорт JSON</h1>
 <p>Данная инструкция описывает пример настройки цепочки преобразований, включающей объект "Программный обработчик", предназначенный для импорта данных из JSON файла, размещенного в файловом хранилище.</p>
 <h3 id="1">Шаг 1: Загрузка файла в файловое хранилище</h3>
-<ol>
-<li>Перейдите в раздел <strong>"Файлы"</strong>.
- <img alt="1_File_section.png" src="../../images/7_Workflow/JSON/1_File_section.png" /></li>
-<li>Загрузите файл формата JSON с данными. Пример файла:
-   ```json</li>
-</ol>
-<p>{
-     "data": [
+<p>Перейдите в раздел <strong>"Файлы"</strong> и загрузите файл формата JSON с данными.
+<img alt="1_File_section.png" src="../../images/7_Workflow/JSON/1_File_section.png" />
+Пример файла:</p>
+<pre><code class="language-json">{
+     &quot;data&quot;: [
        {
-         "id": 1,
-         "name": "Объект 1"
+         &quot;id&quot;: 1,
+         &quot;name&quot;: &quot;Объект 1&quot;
        },
        {
-         "id": 2,
-         "name": "Объект 2"
+         &quot;id&quot;: 2,
+         &quot;name&quot;: &quot;Объект 2&quot;
        }
      ]
-   }```</p>
+   }
+</code></pre>
 <blockquote>
 <p>Корневой объект должен содержать одно поле с массивом объектов (в данном примере — поле data).</p>
 </blockquote>
 <p>Убедитесь, что файл успешно добавлен в файловое хранилище.
- <img alt="2_add_json.png" src="../../images/7_Workflow/JSON/2_add_json.png" /></p>
+<img alt="2_add_json.png" src="../../images/7_Workflow/JSON/2_add_json.png" /></p>
 <h3 id="2">Шаг 2: Инициализация обработчика</h3>
+<p>В разделе "<strong>Цепочки</strong>" настройте программный обработчик:</p>
 <ol>
-<li>Перейдите в раздел "Цепочки".</li>
-<li>Настройте программный обработчик:</li>
-<li>Нажмите на кнопку вызова списка обработчиков.</li>
+<li>Выберите программный обработчик из списка.</li>
 </ol>
-<p>Выберите "Программный обработчик. Импорт JSON" из списка.</p>
-<p>В рабочей области появится объект обработчика в виде блока с синим заголовком.</p>
+<p><img alt="4_Choose_processor.png" src="../../images/7_Workflow/JSON/4_Choose_processor.png" />
+<strong>Результат:</strong> в рабочей области появится объект обработчика в виде блока с синим заголовком.</p>
+<p><img alt="5_Json processor in workspace.png" src="../../images/7_Workflow/JSON/5_Json%20processor%20in%20workspace.png" /></p>
 <h3 id="3">Шаг 3: Настройка параметров обработчика</h3>
-<p>Скопируйте путь к загруженному JSON файлу из раздела "Файлы":</p>
-<p>Нажмите на файл правой кнопкой мыши.
-Выберите "Копировать путь".</p>
-<p>Настройте параметры обработчика в поле params:</p>
-<pre><code class="language-json">
-{
+<p>В разделе "Цепочки" настройте параметры процессора:</p>
+<ol>
+<li>Нажмите <strong>params</strong> на блоке, в результате чего отобразится панель для настройки параметров.</li>
+</ol>
+<p><img alt="7_params_field.png" src="../../images/7_Workflow/JSON/7_params_field.png" />
+2. В форме "<strong>Данные</strong>" пропишите параметры процессора в формате Json:</p>
+<ul>
+<li>Скопируйте путь к загруженному JSON файлу из раздела "Файлы".</li>
+</ul>
+<p><img alt="6_Copy_path.png" src="../../images/7_Workflow/JSON/6_Copy_path.png" /></p>
+<ul>
+<li>В поле "<strong>file_path</strong>" подставьте путь к файлу в файловом хранилище.</li>
+<li>В поле "<strong>array_field</strong>": введите имя поля, содержащего массив объектов (в данном примере — data).</li>
+</ul>
+<p><img alt="8_params_value.png" src="../../images/7_Workflow/JSON/8_params_value.png" /></p>
+<pre><code class="language-json">{
     &quot;file_path&quot;: &quot;путь_к_JSON_файлу.json&quot;,
     &quot;array_field&quot;: &quot;data&quot;
 }
 </code></pre>
-<p>file_path: Путь к файлу в файловом хранилище.
-array_field: Имя поля, содержащего массив объектов (в данном примере — data).
-Подключите выходную коллекцию к обработчику. Это позволит сохранять импортированные данные в коллекцию.</p>
+<p>Сохраните импортированные данные в коллекцию:</p>
+<ol>
+<li>Выберите коллекцию из списка на нижней панели.
+ <img alt="9_add_collection.png" src="../../images/7_Workflow/JSON/9_add_collection.png" />
+ <strong>Результат:</strong> в рабочей области появится объект обработчика в виде блока с желтым заголовком.</li>
+<li>Подключите выходную коллекцию к обработчику.
+<img alt="10_add_svyaz.png" src="../../images/7_Workflow/JSON/10_add_svyaz.png" /></li>
+</ol>
 <h3 id="4">Шаг 4: Запуск обработчика</h3>
-<p>Нажмите кнопку запуска на блоке обработчика.</p>
-<p>В рабочей области отобразится статус успешного выполнения.</p>
+<p>Нажмите кнопку запуска на блоке обработчика.
+<img alt="11_Zapusk_blocka.png" src="../../images/7_Workflow/JSON/11_Zapusk_blocka.png" />
+<strong>Результат:</strong> в рабочей области отобразится статус успешного выполнения.
+<img alt="12_success_zapusk.png" src="../../images/7_Workflow/JSON/12_success_zapusk.png" /></p>
 <h3 id="5">Шаг 5: Проверка результата</h3>
-<p>Перейдите в раздел "Коллекции".
-Убедитесь, что данные из JSON файла корректно добавлены в выбранную коллекцию.
-Отладка скрипта
-Если обработчик возвращает ошибку:</p>
-<p>Нажмите на заголовок блока, чтобы открыть панель настройки обработчика.</p>
-<p>В панели настройки вызовите функцию скрипта для отладки.
-Скопируйте текст скрипта в среду разработки для выполнения отладки.</p>
+<p>В разделе "<strong>Коллекции</strong>" убедитесь, что данные из JSON файла корректно добавлены в выбранную коллекцию.
+<img alt="13_collection_data.png" src="../../images/7_Workflow/JSON/13_collection_data.png" /></p>
+<h3 id="6">Шаг 6: Отладка скрипта</h3>
+<p>Если обработчик возвращает ошибку:
+<img alt="14_bad_zapusk.png" src="../../images/7_Workflow/JSON/14_bad_zapusk.png" />
+<img alt="15_bad_zapusk_mastakes_window.png" src="../../images/7_Workflow/JSON/15_bad_zapusk_mastakes_window.png" />
+Нажмите на заголовок блока, чтобы открыть панель настройки обработчика.
+<img alt="16_widnow_config_processor.png" src="../../images/7_Workflow/JSON/16_widnow_config_processor.png" />
+В панели настройки вызовите функцию скрипта для отладки.
+<img alt="17_scrypt_dlya_otladki.png" src="../../images/7_Workflow/JSON/17_scrypt_dlya_otladki.png" />
+Скопируйте текст скрипта в среду разработки и выполните отладку.</p>
 <h1 id="excel">Импорт Excel</h1>
 <p>Ниже описан пример настройки цепочки преобразований, включающих объекты "Программный обработчик" и "Коллекция".
 1. В разделе "Файлы" загрузите файл формата XSLX.</p>
