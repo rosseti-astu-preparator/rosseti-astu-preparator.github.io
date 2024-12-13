@@ -209,6 +209,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_3" class="nav-link">Семантический запрос</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
@@ -340,7 +345,62 @@
 <ol>
 <li>Скопируйте текст и отладьте его в среде разработки.</li>
 </ol>
-<p><img alt="Script_text.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/Script_text.png" /></p></div>
+<p><img alt="Script_text.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/Script_text.png" /></p>
+<h1 id="_3">Семантический запрос</h1>
+<p>Ниже описан пример настройки цепочки преобразований с использованием объекта "<strong>Программный обработчик</strong>", выполняющего семантический запрос.</p>
+<h3 id="1_1">Шаг 1: Загрузка данных и подготовка</h3>
+<p>Перейдите в программное приложение <strong>Редактор модели</strong> и, в списке "<strong>Онтологии</strong>", выберите "<strong>Семантические запросы</strong>".
+<img alt="1_model_editor_ontology.png" src="../../images/7_Workflow/Sem_query/1_model_editor_ontology.png" />
+Скопируйте идентификатор запроса без префикса.
+<img alt="2_IRI_sem_query.png" src="../../images/7_Workflow/Sem_query/2_IRI_sem_query.png" /></p>
+<h3 id="2_1">Шаг 2: Инициализация обработчика</h3>
+<p>В разделе "Цепочки" настройте программный обработчик:
+* Выберите обработчик для семантического запроса из списка.
+* Обработчик отобразится в рабочей области в виде блока с синим заголовком.</p>
+<p><img alt="3_sem_query_block.png" src="../../images/7_Workflow/Sem_query/3_sem_query_block.png" /></p>
+<h3 id="3_1">Шаг 3: Настройка параметров обработчика</h3>
+<p>В блоке обработчика нажмите params, чтобы открыть панель настройки параметров.
+<img alt="4_sem_query_params.png" src="../../images/7_Workflow/Sem_query/4_sem_query_params.png" />
+Задайте параметры обработчика в формате JSON:
+* format: укажите формат данных на выходе (csv для плоского формата или json для иерархического).
+* sem_query_id: задайте идентификатор семантического запроса без префикса.
+* root_entity_ids: перечислите идентификаторы объектов без префиксов (необязательный параметр). Если он отсутствует, запрос применяется ко всем объектам нужного типа.
+Пример параметров для csv-формата:</p>
+<pre><code class="language-json">{
+    &quot;format&quot;: &quot;csv&quot;,
+    &quot;sem_query_id&quot;: &quot;SemanticQuery_22815230-67d7-4de8-927a-002010abad77&quot;
+}
+</code></pre>
+<p>Пример параметров для json-формата:</p>
+<pre><code class="language-json">{
+    &quot;format&quot;: &quot;json&quot;,
+    &quot;sem_query_id&quot;: &quot;SemanticQuery_c061e503-c81c-4c64-9ad9-7047cb2e9ed6&quot;,
+     &quot;root_entity_ids&quot;: [
+            &quot;e6e30190-624c-4664-b649-47f833d2a869&quot;,
+            &quot;556bcf33-0d51-4303-b193-62a6ad389318&quot;
+        ]
+}
+</code></pre>
+<p>Подключите выходную коллекцию:
+* Выберите коллекцию из списка в нижней панели.
+* Соедините блок обработчика с выходной коллекцией.
+<img alt="5_add_correct_collection.png" src="../../images/7_Workflow/Sem_query/5_add_correct_collection.png" /></p>
+<blockquote>
+<p>В результате запуска обработчика может возникнуть ошибка, связанная с некорректным форматированием входного CSV-файла.
+* Добавьте еще одну коллекцию на вход для записи расхождения в данных.</p>
+</blockquote>
+<p><img alt="6_add_incorrect_collection.png" src="../../images/7_Workflow/Sem_query/6_add_incorrect_collection.png" /></p>
+<blockquote>
+<p>Коллекция должна быть добавлена в тот же порт.</p>
+</blockquote>
+<h3 id="4_1">Шаг 4: Запуск обработчика</h3>
+<p>Нажмите на элемент запуска блока обработчика.
+<img alt="7_start_block.png" src="../../images/7_Workflow/Sem_query/7_start_block.png" />
+<strong>Результат:</strong> 
+В рабочей области отобразится статус успешного выполнения. Данные будут сохранены в формате JSON или CSV в зависимости от указанных параметров.</p>
+<h3 id="5_1">Шаг 5: Проверка результата</h3>
+<p>В разделе "Коллекции" убедитесь, что данные корректно добавлены в выбранную коллекцию.
+<img alt="Семантический запрос. Результат" src="../../images/7_Workflow/Sem_query/8_sem_query_result.png" /></p></div>
             </div>
         </div>
 
