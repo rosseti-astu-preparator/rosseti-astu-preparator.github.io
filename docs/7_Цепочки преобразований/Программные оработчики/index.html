@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Программные обработчики - РОССЕТИ АСТУ</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">РОССЕТИ АСТУ</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Вход в систему</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../1_%D0%92%D1%85%D0%BE%D0%B4%20%D0%B2%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%83/%D0%92%D1%85%D0%BE%D0%B4%20%D0%B2%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%83/" class="dropdown-item">Вход в систему</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Пользовательская БД</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../2_%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D0%91%D0%94/%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D0%91%D0%94/" class="dropdown-item">Создание БД</a>
+</li>
+                                    
+<li>
+    <a href="../../2_%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D0%91%D0%94/%D0%9F%D0%B5%D1%80%D0%B5%D0%BD%D0%BE%D1%81%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BE%D0%B2%20%D0%BC%D0%B5%D0%B6%D0%B4%D1%83%20%D1%81%D1%82%D0%B5%D0%BD%D0%B4%D0%B0%D0%BC%D0%B8/" class="dropdown-item">Перенос объектов между стендами</a>
+</li>
+                                    
+<li>
+    <a href="../../2_%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D0%91%D0%94/%D0%9E%D0%B1%D1%89%D0%B8%D0%B5%20%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8%20%D1%81%D0%BF%D0%B8%D1%81%D0%BA%D0%B0%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BE%D0%B2/" class="dropdown-item">Общие функции списка объектов</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Коллекции</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../3_%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/" class="dropdown-item">Коллекции</a>
+</li>
+                                    
+<li>
+    <a href="../../3_%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/%D0%98%D0%BC%D0%BF%D0%BE%D1%80%D1%82%20%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2/" class="dropdown-item">Импорт файлов</a>
+</li>
+                                    
+<li>
+    <a href="../../3_%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/%D0%AD%D0%BA%D1%81%D0%BF%D0%BE%D1%80%D1%82%20%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2/" class="dropdown-item">Экспорт файлов</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Настройка</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../4_%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/" class="dropdown-item">Настройка</a>
+</li>
+                                    
+<li>
+    <a href="../../4_%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/4_1_%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8/" class="dropdown-item">Создание настройки</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Преобразование данных</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../4_%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%90%D0%B3%D1%80%D0%B5%D0%B3%D0%B0%D1%86%D0%B8%D1%8F/" class="dropdown-item">Агрегация</a>
+</li>
+            
+<li>
+    <a href="../../4_%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%86%D0%B8%D1%8F/" class="dropdown-item">Проекция</a>
+</li>
+            
+<li>
+    <a href="../../4_%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%A1%D0%BE%D0%B5%D0%B4%D0%B8%D0%BD%D0%B8%D1%82%D1%8C/" class="dropdown-item">Соединить</a>
+</li>
+            
+<li>
+    <a href="../../4_%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%9E%D0%B1%D1%8A%D0%B5%D0%B4%D0%B8%D0%BD%D0%B8%D1%82%D1%8C/" class="dropdown-item">Объединить</a>
+</li>
+            
+<li>
+    <a href="../../4_%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%B8%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D0%B8%20%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0/" class="dropdown-item">Преобразование при помощи шаблона</a>
+</li>
+            
+<li>
+    <a href="../../4_%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0%20%D0%BA%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/" class="dropdown-item">Таблица коллекции</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../4_%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/4_2_%D0%A0%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8/%D0%A0%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8/" class="dropdown-item">Редактирование настройки</a>
+</li>
+                                    
+<li>
+    <a href="../../4_%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/4_4_%D0%9F%D0%B5%D1%80%D1%81%D0%B8%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/%D0%9F%D0%B5%D1%80%D1%81%D0%B8%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/" class="dropdown-item">Персистирование</a>
+</li>
+                                    
+<li>
+    <a href="../../4_%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/4_5_%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%20%D1%84%D0%B8%D0%BA%D1%81%D0%B0%D1%86%D0%B8%D0%B8%20%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B9/%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%20%D1%84%D0%B8%D0%BA%D1%81%D0%B0%D1%86%D0%B8%D0%B8%20%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B9/" class="dropdown-item">Проверка фиксации изменений</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../5_%D0%9F%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D1%8B/%D0%9F%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D1%8B/" class="nav-link">Процессы</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Шаблоны</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../6_%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0/" class="dropdown-item">Создание шаблона</a>
+</li>
+                                    
+<li>
+    <a href="../../6_%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B/%D0%9F%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%20%D0%BF%D0%BE%20%D1%82%D0%B8%D0%BF%D1%83%20%D0%98%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA/" class="dropdown-item">Параметр по типу "Источник"</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Цепочки</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../%D0%A6%D0%B5%D0%BF%D0%BE%D1%87%D0%BA%D0%B8%20%D0%BF%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9/" class="dropdown-item">Цепочки преобразований</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Программные обработчики</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../8_%D0%A4%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%BE%D0%B5%20%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D0%BB%D0%B8%D1%89%D0%B5/%D0%A4%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%BE%D0%B5%20%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D0%BB%D0%B8%D1%89%D0%B5/" class="nav-link">Файлы</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../%D0%A6%D0%B5%D0%BF%D0%BE%D1%87%D0%BA%D0%B8%20%D0%BF%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../8_%D0%A4%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%BE%D0%B5%20%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D0%BB%D0%B8%D1%89%D0%B5/%D0%A4%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%BE%D0%B5%20%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D0%BB%D0%B8%D1%89%D0%B5/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#json" class="nav-link">Импорт JSON</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#excel" class="nav-link">Импорт Excel</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_3" class="nav-link">Семантический запрос</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_4" class="nav-link">Сопоставление</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_8" class="nav-link">Набор коллекций по маске</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_11" class="nav-link">Сводный отчет по результатам сопоставления</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="json">Импорт JSON</h1>
+<p>Данная инструкция описывает пример настройки цепочки преобразований, включающей объект "Программный обработчик", предназначенный для импорта данных из JSON файла, размещенного в файловом хранилище.</p>
+<h3 id="1">Шаг 1: Загрузка файла в файловое хранилище</h3>
+<p>Перейдите в раздел <strong>"Файлы"</strong> и загрузите файл формата JSON с данными.
+<img alt="1_File_section.png" src="../../images/7_Workflow/JSON/1_File_section.png" />
+Пример файла:</p>
+<pre><code class="language-json">{
+     &quot;data&quot;: [
+       {
+         &quot;id&quot;: 1,
+         &quot;name&quot;: &quot;Объект 1&quot;
+       },
+       {
+         &quot;id&quot;: 2,
+         &quot;name&quot;: &quot;Объект 2&quot;
+       }
+     ]
+   }
+</code></pre>
+<blockquote>
+<p>Корневой объект должен содержать одно поле с массивом объектов (в данном примере — поле data).</p>
+</blockquote>
+<p>Убедитесь, что файл успешно добавлен в файловое хранилище.
+<img alt="2_add_json.png" src="../../images/7_Workflow/JSON/2_add_json.png" /></p>
+<h3 id="2">Шаг 2: Инициализация обработчика</h3>
+<p>В разделе "<strong>Цепочки</strong>" настройте программный обработчик:</p>
+<ol>
+<li>Выберите программный обработчик из списка.</li>
+</ol>
+<p><img alt="4_Choose_processor.png" src="../../images/7_Workflow/JSON/4_Choose_processor.png" />
+<strong>Результат:</strong> в рабочей области появится объект обработчика в виде блока с синим заголовком.</p>
+<p><img alt="5_Json processor in workspace.png" src="../../images/7_Workflow/JSON/5_Json%20processor%20in%20workspace.png" /></p>
+<h3 id="3">Шаг 3: Настройка параметров обработчика</h3>
+<p>В разделе "Цепочки" настройте параметры процессора:</p>
+<ol>
+<li>Нажмите <strong>params</strong> на блоке, в результате чего отобразится панель для настройки параметров.</li>
+</ol>
+<p><img alt="7_params_field.png" src="../../images/7_Workflow/JSON/7_params_field.png" />
+1. В форме "<strong>Данные</strong>" пропишите параметры процессора в формате Json:</p>
+<ul>
+<li>Скопируйте путь к загруженному JSON файлу из раздела "Файлы".</li>
+</ul>
+<p><img alt="6_Copy_path.png" src="../../images/7_Workflow/JSON/6_Copy_path.png" /></p>
+<ul>
+<li>В поле "<strong>file_path</strong>" подставьте путь к файлу в файловом хранилище.</li>
+<li>В поле "<strong>array_field</strong>": введите имя поля, содержащего массив объектов (в данном примере — data).</li>
+</ul>
+<p><img alt="8_params_value.png" src="../../images/7_Workflow/JSON/8_params_value.png" /></p>
+<pre><code class="language-json">{
+    &quot;file_path&quot;: &quot;путь_к_JSON_файлу.json&quot;,
+    &quot;array_field&quot;: &quot;data&quot;
+}
+</code></pre>
+<p>Сохраните импортированные данные в коллекцию:</p>
+<ol>
+<li>Выберите коллекцию из списка на нижней панели.
+ <img alt="9_add_collection.png" src="../../images/7_Workflow/JSON/9_add_collection.png" />
+ <strong>Результат:</strong> в рабочей области появится объект обработчика в виде блока с желтым заголовком.</li>
+<li>Подключите выходную коллекцию к обработчику.
+<img alt="10_add_svyaz.png" src="../../images/7_Workflow/JSON/10_add_svyaz.png" /></li>
+</ol>
+<h3 id="4">Шаг 4: Запуск обработчика</h3>
+<p>Нажмите кнопку запуска на блоке обработчика.
+<img alt="11_Zapusk_blocka.png" src="../../images/7_Workflow/JSON/11_Zapusk_blocka.png" />
+<strong>Результат:</strong> в рабочей области отобразится статус успешного выполнения.
+<img alt="12_success_zapusk.png" src="../../images/7_Workflow/JSON/12_success_zapusk.png" /></p>
+<h3 id="5">Шаг 5: Проверка результата</h3>
+<p>В разделе "<strong>Коллекции</strong>" убедитесь, что данные из JSON файла корректно добавлены в выбранную коллекцию.
+<img alt="13_collection_data.png" src="../../images/7_Workflow/JSON/13_collection_data.png" /></p>
+<h3 id="6">Шаг 6: Отладка скрипта</h3>
+<p>Если обработчик возвращает ошибку:
+<img alt="14_bad_zapusk.png" src="../../images/7_Workflow/JSON/14_bad_zapusk.png" />
+<img alt="15_bad_zapusk_mastakes_window.png" src="../../images/7_Workflow/JSON/15_bad_zapusk_mastakes_window.png" />
+Нажмите на заголовок блока, чтобы открыть панель настройки обработчика.
+<img alt="16_widnow_config_processor.png" src="../../images/7_Workflow/JSON/16_widnow_config_processor.png" />
+В панели настройки вызовите функцию скрипта для отладки.
+<img alt="17_scrypt_dlya_otladki.png" src="../../images/7_Workflow/JSON/17_scrypt_dlya_otladki.png" />
+Скопируйте текст скрипта в среду разработки и выполните отладку.</p>
+<h1 id="excel">Импорт Excel</h1>
+<p>Ниже описан пример настройки цепочки преобразований, включающих объекты "Программный обработчик" и "Коллекция".
+1. В разделе "Файлы" загрузите файл формата XSLX.</p>
+<p><img alt="upload_file_to_s3.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/upload_file_to_s3.png" /></p>
+<h3 id="_1">Инициализация обработчика</h3>
+<ol>
+<li>В разделе "Цепочки" настройте обработчик.</li>
+</ol>
+<p><img alt="Вызов списка обработчиков.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/%D0%92%D1%8B%D0%B7%D0%BE%D0%B2%20%D1%81%D0%BF%D0%B8%D1%81%D0%BA%D0%B0%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%B2.png" /></p>
+<pre><code>- Выберите обрабочик из списка.
+</code></pre>
+<p><em>В результате, выбранный объект отобразится в рабочей области в виде блока с синим заголовком</em></p>
+<pre><code>- Скопируйте путь к файлу в разделе “Файлы”.
+</code></pre>
+<p><img alt="copy_path.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/copy_path.png" /></p>
+<pre><code>- Задайте параметры в поле params:
+</code></pre>
+<pre><code class="language-json">{
+    &quot;file_path&quot;: &quot;путь_к_тестовому_файлу.xlsx&quot;
+}
+</code></pre>
+<pre><code>- Подключите выходную коллекцию к обработчику.
+</code></pre>
+<p><img alt="Add_collection.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/Add_collection.png" /></p>
+<pre><code>- Запустите обработчик.
+</code></pre>
+<p><img alt="Launch_processor.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/Launch_processor.png" /></p>
+<p><strong>Результат:</strong> В рабочей области должен отобразиться статус успешного запуска процесса, а в списке коллекций объект с данными из хранилища.</p>
+<p><img alt="Success_action.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/Success_action.png" /></p>
+<ol>
+<li>Проверьте, что данные из <code>XLSX</code> файла корректно добавлены в раздел "Коллекции".</li>
+</ol>
+<h3 id="_2">Отладка скрипта</h3>
+<blockquote>
+<p>В случае, если запуск обработчика возвращает ошибку, отладьте скрипт вручную.</p>
+</blockquote>
+<ol>
+<li>Нажмите на заголовок блока.</li>
+</ol>
+<p><img alt="Tap_block_header.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/Tap_block_header.png" /></p>
+<p><strong>Результат:</strong> слева отобразится панель настройки обработчика.</p>
+<ol>
+<li>Вызовите функцию скрипта для отладки.</li>
+</ol>
+<p><img alt="Config_processor.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/Config_processor.png" /></p>
+<ol>
+<li>Скопируйте текст и отладьте его в среде разработки.</li>
+</ol>
+<p><img alt="Script_text.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/Script_text.png" /></p>
+<h1 id="_3">Семантический запрос</h1>
+<p>Ниже описан пример настройки цепочки преобразований с использованием объекта "<strong>Программный обработчик</strong>", выполняющего семантический запрос.</p>
+<h3 id="1_1">Шаг 1: Загрузка данных и подготовка</h3>
+<p>Перейдите в программное приложение <strong>Редактор модели</strong> и, в списке "<strong>Онтологии</strong>", выберите "<strong>Семантические запросы</strong>".
+<img alt="1_model_editor_ontology.png" src="../../images/7_Workflow/Sem_query/1_model_editor_ontology.png" />
+Скопируйте идентификатор запроса без префикса.
+<img alt="2_IRI_sem_query.png" src="../../images/7_Workflow/Sem_query/2_IRI_sem_query.png" /></p>
+<h3 id="2_1">Шаг 2: Инициализация обработчика</h3>
+<p>В разделе "Цепочки" настройте программный обработчик:
+* Выберите обработчик для семантического запроса из списка.
+* Обработчик отобразится в рабочей области в виде блока с синим заголовком.</p>
+<p><img alt="3_sem_query_block.png" src="../../images/7_Workflow/Sem_query/3_sem_query_block.png" /></p>
+<h3 id="3_1">Шаг 3: Настройка параметров обработчика</h3>
+<p>В блоке обработчика нажмите params, чтобы открыть панель настройки параметров.
+<img alt="4_sem_query_params.png" src="../../images/7_Workflow/Sem_query/4_sem_query_params.png" />
+Задайте параметры обработчика в формате JSON:
+* format: укажите формат данных на выходе (csv для плоского формата или json для иерархического).
+* sem_query_id: задайте идентификатор семантического запроса без префикса.
+* root_entity_ids: перечислите идентификаторы объектов без префиксов (необязательный параметр). Если он отсутствует, запрос применяется ко всем объектам нужного типа.
+Пример параметров для csv-формата:</p>
+<pre><code class="language-json">{
+    &quot;format&quot;: &quot;csv&quot;,
+    &quot;sem_query_id&quot;: &quot;SemanticQuery_22815230-67d7-4de8-927a-002010abad77&quot;
+}
+</code></pre>
+<p>Пример параметров для json-формата:</p>
+<pre><code class="language-json">{
+    &quot;format&quot;: &quot;json&quot;,
+    &quot;sem_query_id&quot;: &quot;SemanticQuery_c061e503-c81c-4c64-9ad9-7047cb2e9ed6&quot;,
+     &quot;root_entity_ids&quot;: [
+            &quot;e6e30190-624c-4664-b649-47f833d2a869&quot;,
+            &quot;556bcf33-0d51-4303-b193-62a6ad389318&quot;
+        ]
+}
+</code></pre>
+<p>Подключите выходную коллекцию:
+* Выберите коллекцию из списка в нижней панели.
+* Соедините блок обработчика с выходной коллекцией.
+<img alt="5_add_correct_collection.png" src="../../images/7_Workflow/Sem_query/5_add_correct_collection.png" /></p>
+<blockquote>
+<p>В результате запуска обработчика может возникнуть ошибка, связанная с некорректным форматированием входного CSV-файла.
+* Добавьте еще одну коллекцию на вход для записи расхождения в данных.</p>
+</blockquote>
+<p><img alt="6_add_incorrect_collection.png" src="../../images/7_Workflow/Sem_query/6_add_incorrect_collection.png" /></p>
+<blockquote>
+<p>Коллекция должна быть добавлена в тот же порт.</p>
+</blockquote>
+<h3 id="4_1">Шаг 4: Запуск обработчика</h3>
+<p>Нажмите на элемент запуска блока обработчика.
+<img alt="7_start_block.png" src="../../images/7_Workflow/Sem_query/7_start_block.png" />
+<strong>Результат:</strong> 
+В рабочей области отобразится статус успешного выполнения. Данные будут сохранены в формате JSON или CSV в зависимости от указанных параметров.</p>
+<h3 id="5_1">Шаг 5: Проверка результата</h3>
+<p>В разделе "Коллекции" убедитесь, что данные корректно добавлены в выбранную коллекцию.
+<img alt="Семантический запрос. Результат" src="../../images/7_Workflow/Sem_query/8_sem_query_result.png" /></p>
+<h1 id="_4">Сопоставление</h1>
+<p>Программный обработчик "<strong>Сопоставление</strong>" выполняет следующие задачи:</p>
+<ul>
+<li>Сопоставление объектов из различных систем по выделенному ключу.</li>
+<li>Формирование выходных данных в соответствии с алгоритмом:<ul>
+<li>Дубликаты объектов.</li>
+<li>Справочники ключей без дубликатов. </li>
+<li>Сопоставленные объекты с указанием идентификаторов систем. </li>
+<li>Несопоставленные объекты для каждой системы.</li>
+</ul>
+</li>
+</ul>
+<h4 id="_5">Входные данные</h4>
+<p>Для корректной работы обработчика необходимо соблюсти имена полей коллекции:</p>
+<ul>
+<li>Система: идентификатор системы (например, "СУПА"). </li>
+<li>Тип объекта: тип объектов (например, "подстанции"). </li>
+<li>Ключ: уникальный ключ для сопоставления. </li>
+<li>Идентификатор: уникальный идентификатор объекта.</li>
+</ul>
+<h4 id="_6">Выходные данные</h4>
+<p>После выполнения обработчика пользователь получает следующие результаты:</p>
+<ol>
+<li>Дубликаты: список объектов, имеющих повторяющиеся ключи сопоставления. Выводится отдельно для каждой системы.</li>
+<li>Справочники ключей: список входных объектов без дубликатов.</li>
+<li>Сопоставленные объекты: объекты, для которых ключи совпадают, объединяются следующим образом:<ul>
+<li>Запись из справочника ключей системы 1 с добавлением идентификатора системы 2.</li>
+<li>Запись из справочника ключей системы 2 с добавлением идентификатора системы 1.</li>
+</ul>
+</li>
+<li>Несопоставленные объекты: списки объектов, для которых не найдено совпадение по ключу, отдельно для каждой системы.</li>
+</ol>
+<h3 id="_7">Порядок работы</h3>
+<ol>
+<li>
+<p>Добавьте обработчик в рабочую область.<br />
+<img alt="1_add_processor.png" src="../../images/7_Workflow/Comparation/1_add_processor.png" /></p>
+</li>
+<li>
+<p>Добавьте входные коллекции и подключите их к процессору.<br />
+<img alt="2_add_source.png" src="../../images/7_Workflow/Comparation/2_add_source.png" /></p>
+</li>
+</ol>
+<p>Обработчик поддерживает два способа подключения входных данных:</p>
+<ul>
+<li><strong>Явное подключение</strong>: пользователь вручную задаёт коллекции для системы 1 и системы 2.</li>
+<li><strong>Подключение по маске</strong>: использованием маски можно подключить сразу несколько коллекций, соответствующих указанным условиям (например, все типы оборудования из определённой системы).</li>
+</ul>
+<ol start="3">
+  <li>Добавьте выходные данные и задайте им имена.</li>
+  <li>Запустите обработчик.</li>
+</ol>
+
+<p><img alt="3_launch_processor.png" src="../../images/7_Workflow/Comparation/3_launch_processor.png" /></p>
+<p><strong>Результат:</strong><br />
+Выходные данные будут добавлены в раздел коллекции.<br />
+<img alt="4_output_data.png" src="../../images/7_Workflow/Comparation/4_output_data.png" /></p>
+<h1 id="_8">Набор коллекций по маске</h1>
+<p>Данная функция предназначена для подключения набора коллекций в <strong>обработчике</strong> с использованием маски. Это позволяет:</p>
+<ul>
+<li>Обрабатывать данные сразу из нескольких коллекций.</li>
+<li>Разделять данные из одной коллекции (выход обработчика) на несколько коллекций.</li>
+</ul>
+<h3 id="_9">Входные данные</h3>
+<p><strong>Порядок работы:</strong></p>
+<ol>
+<li>Откройте исходную цепочку преобразований.
+<img alt="1_source_workflow.png" src="../../images/7_Workflow/Mask/1_source_workflow.png" /><blockquote>
+<p>Обратите внимание, что в источнике параметры не заполнены.</p>
+</blockquote>
+</li>
+<li>Задайте маску в параметрах цепочки преобразований:<ul>
+<li>Нажмите на объект, по которому хотите задать маску.</li>
+<li>В отобразившемся окне, введите параметры маски через нижнее подчеркивание:<ul>
+<li>Укажите постоянную часть маски для общей части наименования коллекции.</li>
+<li>Укажите переменную часть маски в фигурных скобках.
+<img alt="2_mask_params.png" src="../../images/7_Workflow/Mask/2_mask_params.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Результат:</strong>
+Обработчик автоматически найдет все коллекции, содержащие постоянную часть маски
+<img alt="2_mask_params_result.png" src="../../images/7_Workflow/Mask/2_mask_params_result.png" /></p>
+<p><strong>Пример 1:</strong></p>
+<ul>
+<li>Введите маску <strong>"СК-11_{x}"</strong>, где <strong>"СК-11"</strong> является постоянной частью, а <strong>"{x}"</strong> - переменной.</li>
+<li>Введите маску <strong>"СУПА_{y}"</strong>, где <strong>"СУПА"</strong> является постоянной частью, а <strong>"{y}"</strong> - переменной.</li>
+</ul>
+<p><strong>Результат:</strong></p>
+<p>В окно с параметрами подтянутся все коллекции из текущей БД:</p>
+<ul>
+<li>В имени которых будет присутствовать постоянная часть маски <strong>"СК-11"</strong> и <strong>"СУПА"</strong>.</li>
+<li>
+<p>Структура маски будет соответствовать - <strong>"[постоянная часть]_{переменная часть}"</strong>.
+<img alt="3_mask_params_example_1.png" src="../../images/7_Workflow/Mask/3_mask_params_example_1.png" />
+<strong>Пример 2:</strong></p>
+</li>
+<li>
+<p>Задайте маску <strong>"{x}_{y}_unmatched"</strong>, где <strong>"x"</strong> и <strong>"у"</strong> - переменные, а <strong>"unmatched"</strong> - постоянная часть.</p>
+</li>
+</ul>
+<p><strong>Результат:</strong></p>
+<p>В окно с параметрами подтянутся все коллекции из текущей БД:</p>
+<ul>
+<li>В имени которых будет присутствовать постоянная часть маски <strong>"unmatched"</strong>.</li>
+<li>Структура маски будет соответствовать - <strong>"{переменная часть}_{переменная часть}_[постоянная часть]"</strong>.
+<img alt="3_mask_params_example_2.png" src="../../images/7_Workflow/Mask/3_mask_params_example_2.png" />
+После настройки маски запустите обработчик. Для проверки результата, нажмите на необходимый блок и отобразите данные.
+<img alt="4_mask_result.png" src="../../images/7_Workflow/Mask/4_mask_result.png" /></li>
+</ul>
+<p><strong>Результат:</strong></p>
+<p>Производные данные содержат поля с наименованием переменной части коллекции, а также поле, с результатом сопоставления по условию.
+<img alt="5_result_pusk_block.png" src="../../images/7_Workflow/Mask/5_result_pusk_block.png" /></p>
+<h3 id="_10">Выходные данные</h3>
+<p>Для распределения выходных данных задайте маску по аналогии.
+<strong>Например:</strong></p>
+<p>{type}_{system}_processed</p>
+<p><strong>Результат:</strong></p>
+<p>Обработчик создаст отдельные коллекции для каждого типа объекта и системы:</p>
+<ul>
+<li>transformer_SK-11_processed</li>
+<li>circuitbreaker_SPA_processed.</li>
+</ul>
+<blockquote>
+<p>Если маска не совпадает с именами коллекций, данные не будут обработаны. Имена коллекций должны быть стандартизированы и соответствовать заданной структуре.</p>
+</blockquote>
+<h1 id="_11">Сводный отчет по результатам сопоставления</h1>
+<p>Программный обработчик <strong>"Сводный отчет"</strong> принимает на вход коллекции, и на выходе формирует таблицу со статистикой. Таблица позволяет анализировать данные, переходить к исходным коллекциям и применять фильтры.</p>
+<h4 id="_12">Входные данные</h4>
+<p>На вход могут подаваться следующие типы коллекций:</p>
+<ul>
+<li><strong>Исключены из выгрузки:</strong> коллекции с перечнем объектов, исключенных из сопоставления.</li>
+<li><strong>Выделено:</strong> коллекции с перечнем сопоставляемых объектов.</li>
+<li><strong>Дубликаты:</strong> коллекции, содержащие список объектов из коллекции «Выделено» с повторяющимся ключом сопоставления.</li>
+<li><strong>Справочник ключей:</strong> коллекции с перечнем сопоставляемых объектов без дубликатов.</li>
+<li><strong>Сопоставлено:</strong> коллекции с объектами, которые были успешно сопоставлены.</li>
+<li><strong>Не сопоставлено:</strong> коллекции с объектами, которые не удалось сопоставить.
+<img alt="Statistic_workflow.png" src="../../images/7_Workflow/Statistic/Statistic_workflow.png" /></li>
+</ul>
+<p>Входные коллекции должны содержать обязательные поля:</p>
+<ul>
+<li>Система.</li>
+<li>
+<p>Тип объекта.
+<img alt="Source_field.png" src="../../images/7_Workflow/Statistic/Source_field.png" />
+Несколько коллекций могут быть подключены к одному входу обработчика как:</p>
+</li>
+<li>
+<p><strong>Явно:</strong> пользователь вручную выбирает коллекции для входа.</p>
+</li>
+<li><strong>По маске:</strong> используется набор коллекций, соответствующих определенным условиям (например, все коллекции одного типа).</li>
+</ul>
+<h4 id="_13">Запуск обработчика</h4>
+<p>Запуск обработчика происходит по аналогии c другими обработчиками текущего раздела.</p>
+<h4 id="_14">Формирование отчета</h4>
+<p>На выходе обработчика формируется коллекция со статистикой (таблица).</p>
+<p><strong>Колонки таблицы:</strong></p>
+<ul>
+<li><strong>Исключены из выгрузки:</strong> количество строк в соответствующих входных коллекциях.</li>
+<li><strong>Выделено:</strong> количество строк в коллекциях сопоставляемых объектов.</li>
+<li><strong>Дубликаты:</strong> количество строк с повторяющимися ключами.</li>
+<li><strong>Справочник ключей:</strong> количество строк сопоставляемых объектов без дубликатов.</li>
+<li><strong>Сопоставлено:</strong> количество успешно сопоставленных строк.</li>
+<li><strong>Не сопоставлено:</strong> количество не сопоставленных строк.</li>
+<li><strong>% сопост:</strong> процент строк в категории «Сопоставлено» относительно «Выделено».</li>
+</ul>
+<p><img alt="statistic_result.png" src="../../images/7_Workflow/Statistic/statistic_result.png" /></p>
+<h4 id="_15">Работа с таблицей</h4>
+<p>Переход к исходным коллекциям</p>
+<p>При нажатии на ячейку в колонках «Исключены из выгрузки», «Выделено», «Дубликаты», «Справочник ключей», «Сопоставлено» или «Не сопоставлено» осуществляется переход в исходную коллекцию с наложением фильтра по колонкам Система и Тип объекта.</p>
+<blockquote>
+<p>Этот функционал реализован с использованием сохранения значений фильтра таблицы в адресной строке браузера.</p>
+</blockquote>
+<h3 id="_16">Пример использования</h3>
+<p>Входные коллекции:</p>
+<p>Коллекция «Исключены из выгрузки»: 10 строк.</p>
+<p>Коллекция «Выделено»: 100 строк.</p>
+<p>Коллекция «Дубликаты»: 20 строк.</p>
+<p>Коллекция «Справочник ключей»: 80 строк.</p>
+<p>Коллекция «Сопоставлено»: 70 строк.</p>
+<p>Коллекция «Не сопоставлено»: 30 строк.</p>
+<table>
+<thead>
+<tr>
+<th>Система</th>
+<th>Тип объекта</th>
+<th>Исключены из выгрузки</th>
+<th>Выделено</th>
+<th>Дубликаты</th>
+<th>Справочник ключей</th>
+<th>Сопоставлено</th>
+<th>Не сопоставлено</th>
+<th>% сопост</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>System A</td>
+<td>Object 1</td>
+<td>5</td>
+<td>50</td>
+<td>10</td>
+<td>40</td>
+<td>35</td>
+<td>15</td>
+<td>70%</td>
+</tr>
+<tr>
+<td>System B</td>
+<td>Object 2</td>
+<td>5</td>
+<td>50</td>
+<td>10</td>
+<td>40</td>
+<td>35</td>
+<td>15</td>
+<td>70%</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
