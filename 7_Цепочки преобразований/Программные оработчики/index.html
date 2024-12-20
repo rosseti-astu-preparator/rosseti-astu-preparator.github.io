@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        
+        <link rel="canonical" href="https://rosseti-astu-preparator.github.io/7_%D0%A6%D0%B5%D0%BF%D0%BE%D1%87%D0%BA%D0%B8%20%D0%BF%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D1%8B%D0%B5%20%D0%BE%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B8/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Программные обработчики - РОССЕТИ АСТУ</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -200,6 +200,31 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">Общее описание</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#simple" class="nav-link">Создание обработчика simple</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#multiport" class="nav-link">Создание обработчика multiport</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#mongo-db" class="nav-link">Стока соединения с Mongo DB (из подключения в препараторе)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_2" class="nav-link">База данных</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
             <li class="nav-item" data-bs-level="1"><a href="#json" class="nav-link">Импорт JSON</a>
               <ul class="nav flex-column">
               </ul>
@@ -210,22 +235,27 @@
               </ul>
             </li>
             
-            <li class="nav-item" data-bs-level="1"><a href="#_3" class="nav-link">Семантический запрос</a>
+            <li class="nav-item" data-bs-level="1"><a href="#_5" class="nav-link">Семантический запрос</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-bs-level="1"><a href="#_4" class="nav-link">Сопоставление</a>
+            <li class="nav-item" data-bs-level="1"><a href="#_6" class="nav-link">Сопоставление</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-bs-level="1"><a href="#_8" class="nav-link">Набор коллекций по маске</a>
+            <li class="nav-item" data-bs-level="1"><a href="#_10" class="nav-link">Набор коллекций по маске</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
-            <li class="nav-item" data-bs-level="1"><a href="#_11" class="nav-link">Сводный отчет по результатам сопоставления</a>
+            <li class="nav-item" data-bs-level="1"><a href="#_13" class="nav-link">Сводный отчет по результатам сопоставления</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_14" class="nav-link">Входные данные</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -234,6 +264,152 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
+<h1 id="_1">Общее описание</h1>
+<p>Программные обработчики
+Обзор
+Программные обработчики реализуются на языке Python по определённым правилам, и объединяются в логические модули и проекты для включения в состав конфигурации системы.
+Создание программных обработчиков может быть выполнено с использованием любой IDE или редактора, который поддерживает программирование на Python.
+Для описания программных обработчиков, модулей и проектов используются следующие классы.</p>
+<p>Processor – обработчик
+Поля:
+name: str – имя процессора уникальное в пределах модуля
+title: str – заголовок
+description: str – описание
+inputs: dict[str, Port] – входы обработчика, каждый описывается объектом типа Port
+outputs: dict[str, Port] – выходы обработчика каждый, описывается объектом типа Port
+action: Callable[[Task], None] – функция реализующая алгоритм обработки с параметром типа Task, который обеспечивает доступ к входным данным по имени входа и запись выходных данных в заданный выход.
+Port – вход или выход обработчика
+Поля:
+name: str – имя процессора уникальное в пределах модуля
+title: str – заголовок
+description: str – описание
+Module – Модуль. Содержит набор программных обработчиков, каждый обработчик включен в один конкретный модуль.
+Поля:
+name: str – уникальное имя модуля
+title: str – заголовок
+description: str – описание
+processors: dict[str, Processor] – набор обработчиков в модуле
+Project – Проект. Содержит набор модулей, один модуль может входить в разные проекты. 
+Поля:
+name: str – уникальное имя модуля
+modules: dict[str, Module] – набор обработчиков в модуле</p>
+<p>Описанный с помощью перечисленных выше классов проект содержащий программные обработчики публикуется в определенную пользовательскую базу данных. После этого, программные обработчики проекта доступны для выбора в качестве звена цепочки преобразований.</p>
+<p>Пример</p>
+<p>Создание обработчиков</p>
+<p>Приведен пример создания 2-х обработчиков, модуля и проекта.</p>
+<p>В данном примере все компоненты описаны в одном файле.
+При реальной (особенно совместной) разработке важно уделить внимание декомпозиции.
+Декларация обработчиков модулей и проектов может быть разнесена по отдельным функциям, файлам и папкам, оптимальная структура кода будет зависеть от особенностей проекта. 
+Рекомендуется хранение исходного кода обработчиков в GIT.</p>
+<p>example_project.py</p>
+<p>from datetime import datetime
+from dpt import Module, Project, Task, Processor</p>
+<h1 id="simple">Создание обработчика simple</h1>
+<p>def create_simple_processor():
+    processor = Processor(
+        name="simple",
+        title="Простой пример",
+        description="Добавляет колонку с текущей датой и сообщением",
+    )
+    # Добавление входа и выхода
+    processor.add_input()
+    processor.add_output()</p>
+<pre><code># Объявление функции с алгоритмом обработки
+def action(task: Task):
+    # Чтение входящего набора данных
+    data = task.get_reader().read_all()
+    # Обработка данных
+    for item in data:
+        item["info"] = "Обработано питоном " + str(datetime.now())
+    # Запись исходящего набора данных
+    writer = task.get_writer()
+    writer.clear()
+    writer.write_many(data)
+    writer.close()
+
+
+# Назначение функции action в качестве действия для процессора
+processor.set_action(action)
+
+
+return processor
+</code></pre>
+<h1 id="multiport">Создание обработчика multiport</h1>
+<p>def create_multiport_processor():
+    processor = Processor(
+        name="multiport",
+        title="Пример с несколькими портами",
+        description="Объединяет данные из двух наборов данных в один. Дополнительно выдает набор данных со статистикой",
+    )</p>
+<pre><code># Добавление именованных входов и выходов
+processor.add_named_input("data_set1")
+processor.add_named_input("data_set2")
+processor.add_named_output("all_data")
+processor.add_named_output("stat")
+
+
+# Объявление функции с алгоритмом обработки
+def action(task: Task):
+    # Получение входящих наборов данных по имени порта
+    reader1 = task.get_named_reader("data_set1")
+    reader2 = task.get_named_reader("data_set2")
+
+
+    # Запись данных в выход all_data
+    all_data_writer = task.get_named_writer("all_data")
+    all_data_writer.clear()
+    all_data_writer.write_many(list(reader1.read_all()))
+    all_data_writer.write_many(list(reader2.read_all()))
+    all_data_writer.close()
+
+
+    # Запись данных в выход stat
+    stat_writer = task.get_named_writer("stat")
+    stat_writer.clear()
+    stat_writer.write_many(
+        [
+            {"name": "data_set1", "count": reader1.get_count()},
+            {"name": "data_set2", "count": reader2.get_count()},
+        ]
+    )
+    stat_writer.close()
+
+
+# Назначение функции action в качестве действия для процессора
+processor.set_action(action)
+
+
+return processor
+</code></pre>
+<p>def main():
+    # Создание модуля и добавление в него 2-х обработчиков
+    module = Module("examples")
+    module.add_processors([create_simple_processor(), create_multiport_processor()])</p>
+<pre><code># Создание проекта и добавление в него модуля
+project = Project("example")
+project.add_module(module)
+return project
+</code></pre>
+<p>Публикация</p>
+<p>Публикация проекта с программными обработчиками в заданный экземпляр и базу данных препаратора с помощью скрипта.
+from dpt import management</p>
+<h1 id="mongo-db">Стока соединения с Mongo DB (из подключения в препараторе)</h1>
+<p>management.set_connection("mongodb://...")</p>
+<h1 id="_2">База данных</h1>
+<p>management.set_workspace("demo")</p>
+<p>management.deploy_project(
+    # Корневая папка в которой находятся Python файлы с определением обработчиков
+    root_path=r"C:\Repos\datafabric\dpt-python-config\configuration",
+    # Папки и файлы которые нужно включить в сборку (по умолчанию входит все содержимое корневой папки)
+    include=["processors/example_project.py"],
+    # Файл в котором находится функция создающая и возвращающая проект
+    main_file_path=r"processors/example_project.py",
+    # Имя функции которая создает и возвращает проект
+    main_func_name="main",
+)</p>
+<p>В результате публикации обработчики становятся доступны для выбора в разделе «Цепочки». </p>
+<p>Использование</p>
+<p>Пример цепочки, настроенной и выполненной с использованием одного из обработчиков. </p>
 <h1 id="json">Импорт JSON</h1>
 <p>Данная инструкция описывает пример настройки цепочки преобразований, включающей объект "Программный обработчик", предназначенный для импорта данных из JSON файла, размещенного в файловом хранилище.</p>
 <h3 id="1">Шаг 1: Загрузка файла в файловое хранилище</h3>
@@ -293,11 +469,11 @@
  <img alt="9_add_collection.png" src="../../images/7_Workflow/JSON/9_add_collection.png" />
  <strong>Результат:</strong> в рабочей области появится объект обработчика в виде блока с желтым заголовком.</li>
 <li>Подключите выходную коллекцию к обработчику.
-<img alt="10_add_svyaz.png" src="../../images/7_Workflow/JSON/10_add_svyaz.png" /></li>
+<img alt="Добавление связи.png" src="../../images/7_Workflow/JSON/10_add_svyaz.png" /></li>
 </ol>
 <h3 id="4">Шаг 4: Запуск обработчика</h3>
 <p>Нажмите кнопку запуска на блоке обработчика.
-<img alt="11_Zapusk_blocka.png" src="../../images/7_Workflow/JSON/11_Zapusk_blocka.png" />
+<img alt="Запуск блока.png" src="../../images/7_Workflow/JSON/11_Zapusk_blocka.png" />
 <strong>Результат:</strong> в рабочей области отобразится статус успешного выполнения.
 <img alt="12_success_zapusk.png" src="../../images/7_Workflow/JSON/12_success_zapusk.png" /></p>
 <h3 id="5">Шаг 5: Проверка результата</h3>
@@ -306,27 +482,27 @@
 <h3 id="6">Шаг 6: Отладка скрипта</h3>
 <p>Если обработчик возвращает ошибку:
 <img alt="14_bad_zapusk.png" src="../../images/7_Workflow/JSON/14_bad_zapusk.png" />
-<img alt="15_bad_zapusk_mastakes_window.png" src="../../images/7_Workflow/JSON/15_bad_zapusk_mastakes_window.png" />
+<img alt="Отладка скрипта.png" src="../../images/7_Workflow/JSON/15_bad_zapusk_mastakes_window.png" />
 Нажмите на заголовок блока, чтобы открыть панель настройки обработчика.
-<img alt="16_widnow_config_processor.png" src="../../images/7_Workflow/JSON/16_widnow_config_processor.png" />
+<img alt="Панель настройки обработчика.png" src="../../images/7_Workflow/JSON/16_widnow_config_processor.png" />
 В панели настройки вызовите функцию скрипта для отладки.
-<img alt="17_scrypt_dlya_otladki.png" src="../../images/7_Workflow/JSON/17_scrypt_dlya_otladki.png" />
+<img alt="Скрипт для отладки.png" src="../../images/7_Workflow/JSON/17_scrypt_dlya_otladki.png" />
 Скопируйте текст скрипта в среду разработки и выполните отладку.</p>
 <h1 id="excel">Импорт Excel</h1>
 <p>Ниже описан пример настройки цепочки преобразований, включающих объекты "Программный обработчик" и "Коллекция".
-1. В разделе "Файлы" загрузите файл формата XSLX.</p>
-<p><img alt="upload_file_to_s3.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/upload_file_to_s3.png" /></p>
-<h3 id="_1">Инициализация обработчика</h3>
+1. В разделе "Файлы" загрузите файл формата Excel.</p>
+<p><img alt="upload_file_to_s3.png" src="../../images/7_Workflow/Excel/upload_file_to_s3.png" /></p>
+<h3 id="_3">Инициализация обработчика</h3>
 <ol>
 <li>В разделе "Цепочки" настройте обработчик.</li>
 </ol>
-<p><img alt="Вызов списка обработчиков.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/%D0%92%D1%8B%D0%B7%D0%BE%D0%B2%20%D1%81%D0%BF%D0%B8%D1%81%D0%BA%D0%B0%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%B2.png" /></p>
+<p><img alt="Вызов списка обработчиков.png" src="../../images/7_Workflow/Excel/%D0%92%D1%8B%D0%B7%D0%BE%D0%B2%20%D1%81%D0%BF%D0%B8%D1%81%D0%BA%D0%B0%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%B2.png" /></p>
 <pre><code>- Выберите обрабочик из списка.
 </code></pre>
 <p><em>В результате, выбранный объект отобразится в рабочей области в виде блока с синим заголовком</em></p>
 <pre><code>- Скопируйте путь к файлу в разделе “Файлы”.
 </code></pre>
-<p><img alt="copy_path.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/copy_path.png" /></p>
+<p><img alt="copy_path.png" src="../../images/7_Workflow/Excel/copy_path.png" /></p>
 <pre><code>- Задайте параметры в поле params:
 </code></pre>
 <pre><code class="language-json">{
@@ -335,33 +511,25 @@
 </code></pre>
 <pre><code>- Подключите выходную коллекцию к обработчику.
 </code></pre>
-<p><img alt="Add_collection.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/Add_collection.png" /></p>
+<p><img alt="Add_collection.png" src="../../images/7_Workflow/Excel/Add_collection.png" /></p>
 <pre><code>- Запустите обработчик.
 </code></pre>
-<p><img alt="Launch_processor.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/Launch_processor.png" /></p>
+<p><img alt="Launch_processor.png" src="../../images/7_Workflow/Excel/Launch_processor.png" /></p>
 <p><strong>Результат:</strong> В рабочей области должен отобразиться статус успешного запуска процесса, а в списке коллекций объект с данными из хранилища.</p>
-<p><img alt="Success_action.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/Success_action.png" /></p>
-<ol>
-<li>Проверьте, что данные из <code>XLSX</code> файла корректно добавлены в раздел "Коллекции".</li>
-</ol>
-<h3 id="_2">Отладка скрипта</h3>
+<p><img alt="Success_action.png" src="../../images/7_Workflow/Excel/Success_action.png" />
+Проверьте, что данные из <code>XLSX</code> файла корректно добавлены в раздел "Коллекции".</p>
+<h3 id="_4">Отладка скрипта</h3>
 <blockquote>
-<p>В случае, если запуск обработчика возвращает ошибку, отладьте скрипт вручную.</p>
+<p>В случае, если запуск обработчика возвращает ошибку, отладьте скрипт вручную.
+Нажмите на заголовок блока.</p>
 </blockquote>
-<ol>
-<li>Нажмите на заголовок блока.</li>
-</ol>
-<p><img alt="Tap_block_header.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/Tap_block_header.png" /></p>
-<p><strong>Результат:</strong> слева отобразится панель настройки обработчика.</p>
-<ol>
-<li>Вызовите функцию скрипта для отладки.</li>
-</ol>
-<p><img alt="Config_processor.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/Config_processor.png" /></p>
-<ol>
-<li>Скопируйте текст и отладьте его в среде разработки.</li>
-</ol>
-<p><img alt="Script_text.png" src="../../images/7_Workflow/7_2_Program_obrabotchik_Excel/Script_text.png" /></p>
-<h1 id="_3">Семантический запрос</h1>
+<p><img alt="Tap_block_header.png" src="../../images/7_Workflow/Excel/Tap_block_header.png" /></p>
+<p><strong>Результат:</strong> слева отобразится панель настройки обработчика.
+Вызовите функцию скрипта для отладки.</p>
+<p><img alt="Config_processor.png" src="../../images/7_Workflow/Excel/Config_processor.png" />
+Скопируйте текст и отладьте его в среде разработки.</p>
+<p><img alt="Script_text.png" src="../../images/7_Workflow/Excel/Script_text.png" /></p>
+<h1 id="_5">Семантический запрос</h1>
 <p>Ниже описан пример настройки цепочки преобразований с использованием объекта "<strong>Программный обработчик</strong>", выполняющего семантический запрос.</p>
 <h3 id="1_1">Шаг 1: Загрузка данных и подготовка</h3>
 <p>Перейдите в программное приложение <strong>Редактор модели</strong> и, в списке "<strong>Онтологии</strong>", выберите "<strong>Семантические запросы</strong>".
@@ -416,7 +584,7 @@
 <h3 id="5_1">Шаг 5: Проверка результата</h3>
 <p>В разделе "Коллекции" убедитесь, что данные корректно добавлены в выбранную коллекцию.
 <img alt="Семантический запрос. Результат" src="../../images/7_Workflow/Sem_query/8_sem_query_result.png" /></p>
-<h1 id="_4">Сопоставление</h1>
+<h1 id="_6">Сопоставление</h1>
 <p>Программный обработчик "<strong>Сопоставление</strong>" выполняет следующие задачи:</p>
 <ul>
 <li>Сопоставление объектов из различных систем по выделенному ключу.</li>
@@ -428,7 +596,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="_5">Входные данные</h4>
+<h4 id="_7">Входные данные</h4>
 <p>Для корректной работы обработчика необходимо соблюсти имена полей коллекции:</p>
 <ul>
 <li>Система: идентификатор системы (например, "СУПА"). </li>
@@ -436,19 +604,19 @@
 <li>Ключ: уникальный ключ для сопоставления. </li>
 <li>Идентификатор: уникальный идентификатор объекта.</li>
 </ul>
-<h4 id="_6">Выходные данные</h4>
+<h4 id="_8">Выходные данные</h4>
 <p>После выполнения обработчика пользователь получает следующие результаты:</p>
 <ol>
-<li>Дубликаты: список объектов, имеющих повторяющиеся ключи сопоставления. Выводится отдельно для каждой системы.</li>
-<li>Справочники ключей: список входных объектов без дубликатов.</li>
-<li>Сопоставленные объекты: объекты, для которых ключи совпадают, объединяются следующим образом:<ul>
+<li><strong>Дубликаты:</strong> список объектов, имеющих повторяющиеся ключи сопоставления. Выводится отдельно для каждой системы.</li>
+<li><strong>Справочники ключей:</strong> список входных объектов без дубликатов.</li>
+<li><strong>Сопоставленные объекты:</strong> объекты, для которых ключи совпадают, объединяются следующим образом:<ul>
 <li>Запись из справочника ключей системы 1 с добавлением идентификатора системы 2.</li>
 <li>Запись из справочника ключей системы 2 с добавлением идентификатора системы 1.</li>
 </ul>
 </li>
-<li>Несопоставленные объекты: списки объектов, для которых не найдено совпадение по ключу, отдельно для каждой системы.</li>
+<li><strong>Несопоставленные объекты:</strong> списки объектов, для которых не найдено совпадение по ключу, отдельно для каждой системы.</li>
 </ol>
-<h3 id="_7">Порядок работы</h3>
+<h3 id="_9">Порядок работы</h3>
 <ol>
 <li>
 <p>Добавьте обработчик в рабочую область.<br />
@@ -473,13 +641,13 @@
 <p><strong>Результат:</strong><br />
 Выходные данные будут добавлены в раздел коллекции.<br />
 <img alt="4_output_data.png" src="../../images/7_Workflow/Comparation/4_output_data.png" /></p>
-<h1 id="_8">Набор коллекций по маске</h1>
+<h1 id="_10">Набор коллекций по маске</h1>
 <p>Данная функция предназначена для подключения набора коллекций в <strong>обработчике</strong> с использованием маски. Это позволяет:</p>
 <ul>
 <li>Обрабатывать данные сразу из нескольких коллекций.</li>
 <li>Разделять данные из одной коллекции (выход обработчика) на несколько коллекций.</li>
 </ul>
-<h3 id="_9">Входные данные</h3>
+<h3 id="_11">Входные данные</h3>
 <p><strong>Порядок работы:</strong></p>
 <ol>
 <li>Откройте исходную цепочку преобразований.
@@ -487,17 +655,13 @@
 <p>Обратите внимание, что в источнике параметры не заполнены.</p>
 </blockquote>
 </li>
-<li>Задайте маску в параметрах цепочки преобразований:<ul>
-<li>Нажмите на объект, по которому хотите задать маску.</li>
-<li>В отобразившемся окне, введите параметры маски через нижнее подчеркивание:<ul>
-<li>Укажите постоянную часть маски для общей части наименования коллекции.</li>
-<li>Укажите переменную часть маски в фигурных скобках.
-<img alt="2_mask_params.png" src="../../images/7_Workflow/Mask/2_mask_params.png" /></li>
-</ul>
-</li>
-</ul>
-</li>
 </ol>
+<p>Задайте маску в параметрах цепочки преобразований:
+    * Нажмите на объект, по которому хотите задать маску.
+    * В отобразившемся окне, введите параметры маски через нижнее подчеркивание:
+        * Укажите постоянную часть маски для общей части наименования коллекции.
+        * Укажите переменную часть маски в фигурных скобках.
+<img alt="2_mask_params.png" src="../../images/7_Workflow/Mask/2_mask_params.png" /></p>
 <p><strong>Результат:</strong>
 Обработчик автоматически найдет все коллекции, содержащие постоянную часть маски
 <img alt="2_mask_params_result.png" src="../../images/7_Workflow/Mask/2_mask_params_result.png" /></p>
@@ -530,8 +694,8 @@
 </ul>
 <p><strong>Результат:</strong></p>
 <p>Производные данные содержат поля с наименованием переменной части коллекции, а также поле, с результатом сопоставления по условию.
-<img alt="5_result_pusk_block.png" src="../../images/7_Workflow/Mask/5_result_pusk_block.png" /></p>
-<h3 id="_10">Выходные данные</h3>
+<img alt="Результат запуска блока.png" src="../../images/7_Workflow/Mask/5_result_pusk_block.png" /></p>
+<h3 id="_12">Выходные данные</h3>
 <p>Для распределения выходных данных задайте маску по аналогии.
 <strong>Например:</strong></p>
 <p>{type}_{system}_processed</p>
@@ -544,9 +708,9 @@
 <blockquote>
 <p>Если маска не совпадает с именами коллекций, данные не будут обработаны. Имена коллекций должны быть стандартизированы и соответствовать заданной структуре.</p>
 </blockquote>
-<h1 id="_11">Сводный отчет по результатам сопоставления</h1>
+<h1 id="_13">Сводный отчет по результатам сопоставления</h1>
 <p>Программный обработчик <strong>"Сводный отчет"</strong> принимает на вход коллекции, и на выходе формирует таблицу со статистикой. Таблица позволяет анализировать данные, переходить к исходным коллекциям и применять фильтры.</p>
-<h4 id="_12">Входные данные</h4>
+<h1 id="_14">Входные данные</h1>
 <p>На вход могут подаваться следующие типы коллекций:</p>
 <ul>
 <li><strong>Исключены из выгрузки:</strong> коллекции с перечнем объектов, исключенных из сопоставления.</li>
@@ -554,51 +718,59 @@
 <li><strong>Дубликаты:</strong> коллекции, содержащие список объектов из коллекции «Выделено» с повторяющимся ключом сопоставления.</li>
 <li><strong>Справочник ключей:</strong> коллекции с перечнем сопоставляемых объектов без дубликатов.</li>
 <li><strong>Сопоставлено:</strong> коллекции с объектами, которые были успешно сопоставлены.</li>
-<li><strong>Не сопоставлено:</strong> коллекции с объектами, которые не удалось сопоставить.
-<img alt="Statistic_workflow.png" src="../../images/7_Workflow/Statistic/Statistic_workflow.png" /></li>
+<li><strong>Не сопоставлено:</strong> коллекции с объектами, которые не удалось сопоставить.</li>
 </ul>
-<p>Входные коллекции должны содержать обязательные поля:</p>
+<p><img alt="Statistic_workflow.png" src="../../images/7_Workflow/Statistic/Statistic_workflow.png" />
+Входные коллекции должны содержать обязательные поля:</p>
 <ul>
 <li>Система.</li>
-<li>
-<p>Тип объекта.
-<img alt="Source_field.png" src="../../images/7_Workflow/Statistic/Source_field.png" />
+<li>Тип объекта. </li>
+</ul>
+<p><img alt="Source_field.png" src="../../images/7_Workflow/Statistic/Source_field.png" />
 Несколько коллекций могут быть подключены к одному входу обработчика как:</p>
-</li>
+<ul>
 <li>
 <p><strong>Явно:</strong> пользователь вручную выбирает коллекции для входа.</p>
 </li>
-<li><strong>По маске:</strong> используется набор коллекций, соответствующих определенным условиям (например, все коллекции одного типа).</li>
+<li>
+<p><strong>По маске:</strong> используется набор коллекций, соответствующих определенным условиям (например, все коллекции одного типа).</p>
+</li>
 </ul>
-<h4 id="_13">Запуск обработчика</h4>
-<p>Запуск обработчика происходит по аналогии c другими обработчиками текущего раздела.</p>
-<h4 id="_14">Формирование отчета</h4>
+<h4 id="_15">Запуск обработчика</h4>
+<p>Запуск обработчика происходит по аналогии с другими обработчиками текущего раздела.</p>
+<h4 id="_16">Формирование отчета</h4>
 <p>На выходе обработчика формируется коллекция со статистикой (таблица).</p>
 <p><strong>Колонки таблицы:</strong></p>
-<ul>
-<li><strong>Исключены из выгрузки:</strong> количество строк в соответствующих входных коллекциях.</li>
-<li><strong>Выделено:</strong> количество строк в коллекциях сопоставляемых объектов.</li>
-<li><strong>Дубликаты:</strong> количество строк с повторяющимися ключами.</li>
-<li><strong>Справочник ключей:</strong> количество строк сопоставляемых объектов без дубликатов.</li>
-<li><strong>Сопоставлено:</strong> количество успешно сопоставленных строк.</li>
-<li><strong>Не сопоставлено:</strong> количество не сопоставленных строк.</li>
-<li><strong>% сопост:</strong> процент строк в категории «Сопоставлено» относительно «Выделено».</li>
-</ul>
+<p><strong>Исключены из выгрузки:</strong> количество строк в соответствующих входных коллекциях.
+<strong>Выделено:</strong> количество строк в коллекциях сопоставляемых объектов.
+<strong>Дубликаты:</strong> количество строк с повторяющимися ключами.
+<strong>Справочник ключей:</strong> количество строк сопоставляемых объектов без дубликатов.
+<strong>Сопоставлено:</strong> количество успешно сопоставленных строк.
+<strong>Не сопоставлено:</strong> количество не сопоставленных строк.
+<strong>% сопост:</strong> процент строк в категории «Сопоставлено» относительно «Выделено».</p>
 <p><img alt="statistic_result.png" src="../../images/7_Workflow/Statistic/statistic_result.png" /></p>
-<h4 id="_15">Работа с таблицей</h4>
-<p>Переход к исходным коллекциям</p>
+<h4 id="_17">Работа с таблицей</h4>
+<ul>
+<li>Переход к исходным коллекциям</li>
+</ul>
 <p>При нажатии на ячейку в колонках «Исключены из выгрузки», «Выделено», «Дубликаты», «Справочник ключей», «Сопоставлено» или «Не сопоставлено» осуществляется переход в исходную коллекцию с наложением фильтра по колонкам Система и Тип объекта.</p>
 <blockquote>
 <p>Этот функционал реализован с использованием сохранения значений фильтра таблицы в адресной строке браузера.</p>
 </blockquote>
-<h3 id="_16">Пример использования</h3>
+<h4 id="_18">Пример использования</h4>
+<ul>
+<li>
 <p>Входные коллекции:</p>
+</li>
+<li>
 <p>Коллекция «Исключены из выгрузки»: 10 строк.</p>
-<p>Коллекция «Выделено»: 100 строк.</p>
-<p>Коллекция «Дубликаты»: 20 строк.</p>
-<p>Коллекция «Справочник ключей»: 80 строк.</p>
-<p>Коллекция «Сопоставлено»: 70 строк.</p>
-<p>Коллекция «Не сопоставлено»: 30 строк.</p>
+</li>
+<li>Коллекция «Выделено»: 100 строк.</li>
+<li>Коллекция «Дубликаты»: 20 строк.</li>
+<li>Коллекция «Справочник ключей»: 80 строк.</li>
+<li>Коллекция «Сопоставлено»: 70 строк.</li>
+<li>Коллекция «Не сопоставлено»: 30 строк.</li>
+</ul>
 <table>
 <thead>
 <tr>
