@@ -1,0 +1,75 @@
+/* Основные стили для сайта */
+body {
+    font-family: 'Roboto', sans-serif; /* шрифт Roboto */
+    background-color: #fff; /* Белый фон для тела */
+    color: #333; /* Черный текст */
+}
+
+header {
+    background: #2d6da7; /* Синий цвет фона для хедера */
+    color: #fff; /* Белый текст на хедере */
+    padding: 10px 0;
+    text-align: center;
+    border: none; /* границы нет */
+    margin: 0; /* отступы отсутствуют */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    background: #343a40;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для секций */
+section {
+    padding: 20px;
+    margin: 20px;
+    background: #fff; /* Белый фон для секций */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2em;
+    color: #007bff;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* Стили для ссылок */
+a {
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    display: none; /* Убирает футер полностью */
+}
