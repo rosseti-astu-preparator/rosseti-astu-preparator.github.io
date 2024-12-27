@@ -1,0 +1,44 @@
+.navbar.bg-primary {
+    background-image: none !important;
+    background-color: #2d6da7 !important;
+}
+
+.bg-primary {
+    background-color: transparent !important; /*  */
+}
+
+footer {
+    display: none !important;
+}
+
+.nav {
+    --bs-nav-link-padding-x: 1rem;
+    --bs-nav-link-padding-y: 0.5rem;
+    --bs-nav-link-font-weight: normal; /*  */
+    --bs-nav-link-color: #2d6da7 !important; /* Цвет ссылок на боковой панели */
+    --bs-nav-link-hover-color: var(--bs-link-hover-color);
+    --bs-nav-link-disabled-color: var(--bs-secondary-color);
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+/* Стили для навигационной панели */
+.navbar .nav-link {
+    color: #F8F9FA !important; /* Цвет текста для навигационной панели */
+}
+
+.navbar .nav-link:hover {
+    color: #d3d9dA !important; /* Цвет текста при наведении для навигационной панели */
+}
+
+/* Стили для боковой панели */
+.sidebar .nav-link {
+    color: #2d6da7 !important; /* Цвет текста для боковой панели */
+}
+
+.sidebar .nav-link:hover {
+    color: #1a5a8d !important; /* Цвет текста при наведении для боковой панели (можно изменить на нужный) */
+}
