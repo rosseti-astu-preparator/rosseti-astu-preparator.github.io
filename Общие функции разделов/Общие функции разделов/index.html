@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://rosseti-astu-preparator.github.io/%D0%9E%D0%B1%D1%89%D0%B8%D0%B5%20%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8%20%D1%80%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D0%BE%D0%B2/%D0%9E%D0%B1%D1%89%D0%B8%D0%B5%20%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8%20%D1%80%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D0%BE%D0%B2/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Общие функции разделов - РОССЕТИ АСТУ</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">РОССЕТИ АСТУ</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Начало работы</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B/%D0%9F%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B5/" class="dropdown-item">Подключение к системе</a>
+</li>
+                                    
+<li>
+    <a href="../../%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B/%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D0%91%D0%94/" class="dropdown-item">Функциональность пользовательской БД</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Общие функции разделов</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Коллекции</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/" class="dropdown-item">Коллекции</a>
+</li>
+                                    
+<li>
+    <a href="../../%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/%D0%98%D0%BC%D0%BF%D0%BE%D1%80%D1%82%20%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2/" class="dropdown-item">Импорт файлов</a>
+</li>
+                                    
+<li>
+    <a href="../../%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/%D0%AD%D0%BA%D1%81%D0%BF%D0%BE%D1%80%D1%82%20%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2/" class="dropdown-item">Экспорт файлов</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Настройка</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8/" class="dropdown-item">Создание настройки</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Преобразование данных</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%90%D0%B3%D1%80%D0%B5%D0%B3%D0%B0%D1%86%D0%B8%D1%8F/" class="dropdown-item">Агрегация</a>
+</li>
+            
+<li>
+    <a href="../../%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%86%D0%B8%D1%8F/" class="dropdown-item">Проекция</a>
+</li>
+            
+<li>
+    <a href="../../%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%A1%D0%BE%D0%B5%D0%B4%D0%B8%D0%BD%D0%B8%D1%82%D1%8C/" class="dropdown-item">Соединить</a>
+</li>
+            
+<li>
+    <a href="../../%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%9E%D0%B1%D1%8A%D0%B5%D0%B4%D0%B8%D0%BD%D0%B8%D1%82%D1%8C/" class="dropdown-item">Объединить</a>
+</li>
+            
+<li>
+    <a href="../../%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%B8%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D0%B8%20%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0/" class="dropdown-item">Преобразование при помощи шаблона</a>
+</li>
+            
+<li>
+    <a href="../../%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/" class="dropdown-item">Таблица коллекции</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%A0%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8/%D0%A0%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8/" class="dropdown-item">Редактирование настройки</a>
+</li>
+                                    
+<li>
+    <a href="../../%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%A0%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8/%D0%9F%D0%B5%D1%80%D1%81%D0%B8%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/" class="dropdown-item">Персистирование</a>
+</li>
+                                    
+<li>
+    <a href="../../%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0/%D0%A0%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8/%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%20%D1%84%D0%B8%D0%BA%D1%81%D0%B0%D1%86%D0%B8%D0%B8%20%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B9/" class="dropdown-item">Проверка фиксации изменений</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../%D0%9F%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D1%8B/%D0%9F%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D1%8B/" class="nav-link">Процессы</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Шаблоны</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%20%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0/" class="dropdown-item">Создание шаблона</a>
+</li>
+                                    
+<li>
+    <a href="../../%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B/%D0%9F%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%20%D0%BF%D0%BE%20%D1%82%D0%B8%D0%BF%D1%83%20%D0%98%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA/" class="dropdown-item">Параметр по типу "Источник"</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Цепочки</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../%D0%A6%D0%B5%D0%BF%D0%BE%D1%87%D0%BA%D0%B8%20%D0%BF%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9/%D0%A6%D0%B5%D0%BF%D0%BE%D1%87%D0%BA%D0%B8%20%D0%BF%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9/" class="dropdown-item">Цепочки преобразований</a>
+</li>
+                                    
+<li>
+    <a href="../../%D0%A6%D0%B5%D0%BF%D0%BE%D1%87%D0%BA%D0%B8%20%D0%BF%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D1%8B%D0%B5%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B8/" class="dropdown-item">Программные обработчики</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../%D0%A4%D0%B0%D0%B9%D0%BB%D1%8B/%D0%A4%D0%B0%D0%B9%D0%BB%D1%8B/" class="nav-link">Файлы</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Поиск
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B/%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D0%91%D0%94/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Назад
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8/" class="nav-link">
+                                    Вперед <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Содержание">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">Общие функции разделов</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Перенос объектов между стендами</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">Отправка данных из одной БД в другую</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">Группировка объектов</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_6" class="nav-link">Группировка объектов в иерархической структуре</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_11" class="nav-link">Работа с массовым выделением</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_13" class="nav-link">Вырезание и вставка выделенных объектов</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_14" class="nav-link">Поиск объектов и папок</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_15" class="nav-link">Удаление объекта</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">Общие функции разделов</h1>
+<p>Функции, общие для всех разделов (<strong>"Коллекции"</strong>, <strong>"Настройка"</strong>, <strong>"Процессы"</strong>, <strong>"Цепочки"</strong>, <strong>"Шаблоны"</strong>), расположены в левом вертикальном меню и включают:</p>
+<ul>
+<li>Перенос артефактов между стендами.</li>
+<li>Отправку данных из одной БД в другую.</li>
+<li>Группировку объектов.</li>
+<li>Создание иерархической структуры.</li>
+<li>Удаление объектов.</li>
+</ul>
+<p>Специфические функции, будут описаны в соответствующих разделах.</p>
+<h2 id="_2">Перенос объектов между стендами</h2>
+<p><em>Сервис позволяет переносить пользовательские артефакты между стендами.</em></p>
+<p><strong>Для экспорта объектов:</strong></p>
+<ol>
+<li>Выберите пользовательскую БД из списка и нажмите на <strong>"Сервис"</strong> в заголовке приложения.</li>
+</ol>
+<p><img alt="Список &quot;Сервис&quot;" src="../../images/2_Service/1_Service_list.png" /></p>
+<ol start="2">
+  <li>
+    Выберите "Экспорт настроек".
+  </li>
+</ol>
+
+<ol start="3">
+  <li>
+    В открывшемся окне выберите необходимые объекты и подтвердите действие.
+  </li>
+</ol>
+
+<p><strong>Результат:</strong><br />
+Будет сформирован архив файлов. </p>
+<blockquote>
+<p>При необходимости включите данные связанных коллекций, установив соответствующую галочку. Скачайте архив для дальнейшего импорта на другой стенд.</p>
+</blockquote>
+<p><strong>Для импорта объектов:</strong></p>
+<ol>
+<li>Выберите <strong>"Импорт настроек"</strong>.</li>
+<li>Загрузите архив файлов и подтвердите действие.</li>
+</ol>
+<blockquote>
+<p>Для импорта доступны только файлы, экспортированные через данный сервис.</p>
+</blockquote>
+<h2 id="_3">Отправка данных из одной БД в другую</h2>
+<ol>
+<li>Перейдите в раздел, данные которого хотите отправить (например, <strong>"Коллекции"</strong>).</li>
+<li>Включите <a href="#работа-с-массовым-выделением">режим массового выделения</a> и выберите объекты.</li>
+<li>Наведите курсор на многоточие под списком и выберите "Переместить/Копировать".</li>
+</ol>
+<p><img alt="Перемещение/копирование элементов" src="../../images/2_1_Obshie_function_object_list/2_replace_object_element.png" /></p>
+<ol start="4">
+  <li>
+    В открывшемся окне выберите Подключение и целевую БД.
+  </li>
+</ol>
+
+<blockquote>
+<p>Вы можете создать БД непосредственно в окне перемещения - для этого просто введите имя новой БД и подтвердите действие.</p>
+</blockquote>
+<p><img alt="Окно перемещения объектов" src="../../images/2_1_Obshie_function_object_list/3_replace_object_window.png" /></p>
+<blockquote>
+<p>При экспорте настроек необходимо отправить коллекции-источники данных, иначе перемещенная настройка будет пустой.</p>
+</blockquote>
+<h2 id="_4">Группировка объектов</h2>
+<p><em>Группировка позволяет создавать одноуровневые группы объектов в разделах: <strong>"Коллекции"</strong>, <strong>"Настройка"</strong>, <strong>"Процессы"</strong>, <strong>"Цепочки"</strong>, <strong>"Шаблоны"</strong>. В отличие от иерархической структуры, один и тот же объект может быть добавлен в несколько групп одновременно.</em></p>
+<ol>
+<li>Перейдите в раздел, где находятся объекты, которые вы хотите добавить в группу.</li>
+<li>Включите режим массового выделения и выберите объекты.</li>
+<li>Наведите курсор на многоточие под списком объектов и выберите опцию "Группа".</li>
+</ol>
+<p><img alt="Объекты для группировки" src="../../images/2_1_Obshie_function_object_list/4_group_object.png" /></p>
+<ol start="4">
+  <li>
+    Выберите уже существующую группу или создайте новую, указав ее имя.
+  </li>
+</ol>
+
+<p><img alt="Окно создания новой группы" src="../../images/2_1_Obshie_function_object_list/5_new_group_window.png" /></p>
+<p><strong>Результат:</strong><br />
+Отмеченные объекты будут добавлены в указанную группу в разделе <strong>"Группы"</strong>.</p>
+<p><img alt="Новая группа" src="../../images/2_1_Obshie_function_object_list/6_new_group.png" /></p>
+<blockquote>
+<p>Вы можете добавлять в группу объекты различных сущностей, таких как Коллекции, Настройки и Процессы.</p>
+</blockquote>
+<h3 id="_5">Удаление группы</h3>
+<ol>
+<li>Перейдите в раздел <strong>"Группы"</strong> в левом меню.</li>
+<li>Выберите нужную группу и отметьте объекты, которые хотите удалить из нее.</li>
+<li>Нажмите кнопку <strong>"Убрать из группы"</strong>.</li>
+</ol>
+<p><img alt="Удаление из группы" src="../../images/2_1_Obshie_function_object_list/7_delete_from_group.png" /></p>
+<p><strong>Результат:</strong><br />
+Объекты будут удалены из данной группы, но останутся в разделе, к которому они принадлежат.</p>
+<blockquote>
+<p>При удалении объекта из основного раздела, он автоматически удалится из всех групп.</p>
+</blockquote>
+<h2 id="_6">Группировка объектов в иерархической структуре</h2>
+<p><em>Иерархическая структура позволяет организовать объекты в разделах: <strong>"Коллекции"</strong>, <strong>"Настройка"</strong>, <strong>"Процессы"</strong>, <strong>"Цепочки"</strong>, <strong>"Шаблоны"</strong>. В каждом разделе создается своя иерархия, где объекты могут располагаться как в корне, так и внутри папок. Папки и объекты сортируются по имени, и их имена должны быть уникальными в рамках раздела.</em></p>
+<h3 id="_7">Создание каталога</h3>
+<ol>
+<li>Перейдите в один из разделов: <strong>"Коллекции"</strong>, <strong>"Настройка"</strong>, <strong>"Процессы"</strong>, <strong>"Цепочки"</strong>, <strong>"Шаблоны"</strong>.</li>
+<li>На верхней панели инструментов нажмите кнопку <strong>"Создать папку"</strong>.</li>
+</ol>
+<p><img alt="Создание каталога" src="../../images/2_1_Obshie_function_object_list/8_add_folder.png" /></p>
+<ol start="3">
+  <li>
+    Введите имя папки и нажмите OK.
+  </li>
+</ol>
+
+<p><strong>Результат:</strong><br />
+Каталог будет создан в корне раздела. Имя каталога должно быть уникальным в рамках раздела.</p>
+<h3 id="_8">Создание подкаталога</h3>
+<ol>
+<li>Найдите каталог в дереве, в который хотите добавить подкаталог.</li>
+<li>Нажмите на кнопку <strong>"Создать дочернюю папку"</strong> рядом с именем каталога.</li>
+</ol>
+<p><img alt="Кнопка создания каталога" src="../../images/User%20DB/Create_DB_button.png" /></p>
+<ol start="3">
+  <li>
+    Введите имя подкаталога и нажмите **OK**.
+  </li>
+</ol>
+
+<p><strong>Результат:</strong><br />
+Дочерняя папка будет создана внутри выбранной папки.</p>
+<p><img alt="Иерархическая структура" src="../../images/2_1_Obshie_function_object_list/10_hierararchy_structure.png" /></p>
+<h3 id="_9">Создание объекта в корне</h3>
+<p><em>Применимо для разделов <strong>"Настройка"</strong>, <strong>"Шаблоны"</strong>, <strong>"Цепочки"</strong>.</em></p>
+<ol>
+<li>В разделе нажмите <strong>Добавить элемент</strong> на верхней панели инструментов.</li>
+</ol>
+<p><img alt="Добавление элемента" src="../../images/2_1_Obshie_function_object_list/11_add_element.png" /></p>
+<ol start="2">
+  <li>
+    Введите имя объекта и нажмите OK.
+  </li>
+</ol>
+
+<p><strong>Результат:</strong><br />
+Объект будет создан в корне дерева и отображен в списке объектов. Имя объекта должно быть уникальным.</p>
+<h3 id="_10">Создание объекта внутри каталога</h3>
+<ol>
+<li>Найдите папку, в которой хотите создать объект.</li>
+<li>Нажмите кнопку <strong>"Добавить элемент"</strong> рядом с папкой.</li>
+</ol>
+<p><img alt="Добавление объекта внутри каталога" src="../../images/2_1_Obshie_function_object_list/12_add_element_in_structure.png" /></p>
+<p><strong>Результат:</strong><br />
+Объект будет создан внутри выбранной папки.</p>
+<h2 id="_11">Работа с массовым выделением</h2>
+<p><em>Массовое выделение позволяет одновременно выделить несколько объектов и папок для выполнения операций.</em></p>
+<h3 id="_12">Включение режима массового выделения</h3>
+<p>Нажмите на элемент <strong>Массовое выделение</strong> на панели инструментов.</p>
+<p><img alt="Массовое выделение" src="../../images/2_1_Obshie_function_object_list/1_Mass_select_element.png" />
+Отметьте несколько объектов и папок.</p>
+<h2 id="_13">Вырезание и вставка выделенных объектов</h2>
+<ol>
+<li>Включите режим массового выделения и выберите объекты.</li>
+<li>Нажмите кнопку <strong>"Вырезать"</strong> на нижней панели инструментов.</li>
+</ol>
+<p><img alt="Вырезать элемент" src="../../images/2_1_Obshie_function_object_list/13_cut_element.png" /></p>
+<ol>
+<li>Найдите папку, куда нужно переместить объекты, и нажмите кнопку <strong>Вставить</strong> рядом с ее именем.</li>
+</ol>
+<p><img alt="Вставка элемента" src="../../images/2_1_Obshie_function_object_list/14_insert_element.png" /></p>
+<p><strong>Результат:</strong><br />
+Выбранные объекты будут перемещены в указанную папку.</p>
+<h2 id="_14">Поиск объектов и папок</h2>
+<ol>
+<li>Введите имя объекта или папки в поле поиска на панели инструментов.</li>
+<li>Нажмите <strong>Enter</strong>.</li>
+</ol>
+<p><img alt="Строка поиска" src="../../images/2_1_Obshie_function_object_list/15_search_stroke.png" /></p>
+<p><strong>Результат:</strong><br />
+Найденные объекты и папки будут отображаться в своем месте в иерархии.</p>
+<h2 id="_15">Удаление объекта</h2>
+<p><em>Удаление объектов доступно для всех разделов, кроме <strong>Группы</strong>.</em>
+1. Включите режим массового выделения и выберите объекты.
+2. Нажмите кнопку <strong>"Удалить"</strong>.</p>
+<p><img alt="Удаление элемента" src="../../images/2_1_Obshie_function_object_list/17_delete_element.png" /></p>
+<p><strong>Результат:</strong>
+Выбранный объект будет удалён из списка.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Документация создана с помощью <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Поиск</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <p>Чтобы воспользоваться поиском по документам, введите поисковый запрос ниже.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Поиск..." id="mkdocs-search-query" title="Введите поисковый запрос">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="Ничего не найдено"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Сочетания клавиш</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Клавиши</th>
+                    <th>Действие</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Открыть справку</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Следующая страница</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Предыдущая страница</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Поиск</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
