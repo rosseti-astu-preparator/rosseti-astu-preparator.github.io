@@ -1,5 +1,6 @@
 site_name: РОССЕТИ АСТУ
 site_url: https://rosseti-astu-preparator.github.io/
+remote_name: old-origin
 
 nav:
   - Начало работы:
@@ -39,10 +40,42 @@ nav:
   - Файлы: Файлы/Файлы.md
 
 theme:
-  name: mkdocs
-  locale: ru
-
+  palette:
+    primary: custom
+    accent: custom
+  name: material
+  custom_dir: overrides
+  language: ru
+  features:
+    - navigation.instant
+    - header.autohide
+    - content.tooltips
+  hide:
+    - footer
 
 extra_css:
-  - extra.css
+  - stylesheets/extra.css
+
+plugins:
+  - exporter:
+      formats:
+        pdf:
+          enabled: true
+          aggregator:
+            enabled: true
+            output: documentation.pdf
+            covers: all
+      buttons:
+        - title: Сохранить в PDF
+          icon: material-file-download-outline
+          enabled: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.enabled
+          attributes: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.attributes
+  - search
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - pymdownx.snippets
+
+extra: {}
 
